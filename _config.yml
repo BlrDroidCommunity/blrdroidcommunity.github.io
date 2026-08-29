@@ -1,0 +1,7 @@
+title: "Blrdroid"
+description: "Blrdroid is a free, community-run meetup for Android developers in Bangalore: talks, demos, and hallway conversation."
+markdown: kramdown
+
+exclude:
+  - design
+  - README.md

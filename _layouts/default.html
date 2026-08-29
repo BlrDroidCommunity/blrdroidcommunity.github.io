@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.title | default: site.title }}</title>
+<meta name="description" content="{{ page.description | default: site.description }}">
+<link rel="icon" href="{{ '/assets/img/logo.jpg' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/theme.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+</head>
+<body>
+
+<div class="page-bg">
+
+  <nav class="nav">
+    <span class="nav-brand">
+      <img src="{{ '/assets/img/logo.jpg' | relative_url }}" alt="{{ page.nav.brand }}">
+      {{ page.nav.brand }}
+    </span>
+    {% for link in page.nav.links %}
+    <a href="{{ link.href }}">{{ link.label }}</a>
+    {% endfor %}
+  </nav>
+
+  <div class="container">
+
+    <section class="hero">
+      <span class="section-kicker">{{ page.hero.kicker }}</span>
+      <h1 class="hero-heading">{{ page.hero.heading | newline_to_br }}</h1>
+      <div class="hero-body">{{ page.hero.body | markdownify }}</div>
+      <div class="button-row">
+        {% for btn in page.hero.buttons %}
+        <a href="{{ btn.href }}" target="_blank" rel="noopener" class="btn btn-{{ btn.style }}">{{ btn.label }}</a>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div>
+        <span class="section-kicker">{{ page.about.kicker }}</span>
+        <h2 class="about-heading">{{ page.about.heading }}</h2>
+      </div>
+      <div class="about-body">{{ page.about.body | markdownify }}</div>
+    </section>
+
+    <section id="cfp" class="cfp">
+      <div class="cfp-card">
+        <div class="cfp-text">
+          <h3 class="cfp-heading">{{ page.cfp.heading }}</h3>
+          <div class="cfp-body">{{ page.cfp.body | markdownify }}</div>
+        </div>
+        <a href="{{ page.cfp.button.href }}" target="_blank" rel="noopener" class="btn btn-primary cfp-cta">{{ page.cfp.button.label }}</a>
+      </div>
+    </section>
+
+    <section id="join" class="join">
+      <div class="join-card">
+        <h3 class="join-heading">{{ page.join.heading }}</h3>
+        <div class="join-body">{{ page.join.body | markdownify }}</div>
+        <div class="join-buttons">
+          {% for btn in page.join.buttons %}
+          <a href="{{ btn.href }}" target="_blank" rel="noopener" class="btn btn-{{ btn.style }}">{{ btn.label }}</a>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>{{ page.footer.copyright }}</span>
+    </div>
+  </footer>
+
+</div>
+
+</body>
+</html>
