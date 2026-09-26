@@ -25,7 +25,7 @@ hero:
       href: https://luma.com/blrdroid
       style: primary
     - label: Join our WhatsApp
-      href: "https://chat.whatsapp.com/Dv84FxMmHocJzIZiZ6bGE3?utm_source=luma"
+      href: "https://chat.whatsapp.com/JJSgWvuDf9b6yiY5w3tUPR"
       style: secondary
 
 about:
@@ -50,7 +50,7 @@ join:
     Event announcements go out on WhatsApp first. Follow us on X and LinkedIn for recaps, photos.
   buttons:
     - label: WhatsApp group
-      href: "https://chat.whatsapp.com/Dv84FxMmHocJzIZiZ6bGE3?utm_source=luma"
+      href: "https://chat.whatsapp.com/JJSgWvuDf9b6yiY5w3tUPR"
       style: primary
     - label: Follow on X
       href: https://x.com/blrdroid
